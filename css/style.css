@@ -1,0 +1,68 @@
+@import 'font.css';
+@import 'styles/navbar.css';
+@import 'styles/header.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --primary1: #3772FF;
+    --primary4:#45B26B;
+    --nuetrals1:#141416;
+    --nuetrals2: #23262F;
+    --neutrals3:#353945;
+    --nuetrals4: #777E90;
+    --neutrals5:#B1B5C3;
+    --neutrals6:#E6E8EC;
+    --neutrals7:#F4F5F6;
+    --nuetrals8: #FCFCFD;
+    --Poppins-Bold:'Poppins-Bold';
+    --Poppins-SemiBold:'Poppins-SemiBold';
+    --Poppins-Medium:'Poppins-Medium';
+    --Poppins-Regular:'Poppins-Regular';
+    --DMSans-Bold:'DMSans-Bold';
+    --iconSize: 20px;
+}
+
+.container {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    background: var(--nuetrals8);
+}
+
+@media(prefers-color-scheme: dark) {
+    body {
+        background: var(--nuetrals1);
+    }   
+}
+
+@media(max-width:1200px) {
+    .container {
+        padding: 0 15px;
+    }
+       
+}
+       
+@media(max-width:1024px) {
+    .container {
+        max-width: 864px;
+    }
+       
+}
+
+@media(max-width:768px) {
+    .container {
+        padding: 0 32px;
+    }
+       
+}
+       
