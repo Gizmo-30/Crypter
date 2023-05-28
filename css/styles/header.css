@@ -38,12 +38,11 @@
     width: 100%;
     justify-content: center;
     padding: 16px 0;
-    transition: 0.4s;
 }
 
 .header__btn:hover {
     background: var(--primary1);
-    border-color: var(--nuetrals1);
+    color: var(--nuetrals8);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -77,5 +76,9 @@
     .header__btn {
         color:var(--nuetrals8);
         border-color: var(--nuetrals4);
+    }
+    .header__btn:hover {
+        border-color: var(--nuetrals1);
+        
     }
 }
