@@ -30,3 +30,12 @@ let burgerMenu = new BurgerMenu({
     openButton:'.burger__open',
     closeButton:'.burger__close',
 })
+
+const section = document.querySelectorAll('.section')
+
+section.forEach(item => {
+    console.log(item.clientHeight);
+    let height = item.clientHeight
+    item.style = `height:${item.clientHeight + 200}px;`
+    console.log(item.clientHeight);
+});
