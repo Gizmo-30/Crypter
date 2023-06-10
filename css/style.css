@@ -1,7 +1,9 @@
+@import 'reset.css';
 @import 'font.css';
-@import 'styles/navbar.css';
+@import 'styles/navigation.css';
 @import 'styles/header.css';
-@import 'styles/section_1.css';
+@import 'styles/main.css';
+@import 'styles/footer.css';
 
 * {
     margin: 0;
@@ -9,16 +11,19 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    transition: 0.4s;
+    transition: all 0.4s ease 0s;
 }
 
 :root {
     --primary1: #3772FF;
+    --primary2: #9757D7;
+    --primary3: #FFD166;
     --primary4:#45B26B;
+    --primary5:#EF466F;
     --nuetrals1:#141416;
     --nuetrals2: #23262F;
     --neutrals3:#353945;
-    --nuetrals4: #777E90;
+    --neutrals4: #777E91;
     --neutrals5:#B1B5C3;
     --neutrals6:#E6E8EC;
     --neutrals7:#F4F5F6;
@@ -66,6 +71,6 @@ body {
     .container {
         padding: 0 32px;
     }
-       
+
 }
        

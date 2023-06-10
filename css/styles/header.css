@@ -1,3 +1,24 @@
+:root {
+    --primary1: #3772FF;
+    --primary2: #9757D7;
+    --primary3: #FFD166;
+    --primary4: #45B26B;
+    --primary5: #EF466F;
+    --nuetrals1: #141416;
+    --nuetrals2: #23262F;
+    --neutrals3: #353945;
+    --neutrals4: #777E91;
+    --neutrals5: #B1B5C3;
+    --neutrals6: #E6E8EC;
+    --neutrals7: #F4F5F6;
+    --nuetrals8: #FCFCFD;
+    --Poppins-Bold: 'Poppins-Bold';
+    --Poppins-SemiBold: 'Poppins-SemiBold';
+    --Poppins-Medium: 'Poppins-Medium';
+    --Poppins-Regular: 'Poppins-Regular';
+    --DMSans-Bold: 'DMSans-Bold';
+    --iconSize: 20px;
+}
 .header__wrapper {
     display: flex;
     flex-direction: column;
@@ -7,12 +28,13 @@
 }
 
 .header__description {
-    color: var(--nuetrals4);
-    font-family: var( --Poppins-Bold);
+    color: var(--neutrals4);
+    font-family: var(--Poppins-Bold);
     font-size: 12px;
     line-height: 12px;
     text-transform: uppercase;
 }
+
 .header__title {
     color: var(--nuetrals2);
     font-family: var(--DMSans-Bold);
@@ -22,25 +44,28 @@
     margin: 8px 0 24px 0;
 }
 
-.header__title,.header__description {
+.header__title,
+.header__description {
     text-align: center;
 }
 
-.header__btn {
+.button {
     display: flex;
     color: var(--nuetrals2);
     font-family: var(--DMSans-Bold);
-    font-size: 16px;
     line-height: 16px;
-    border: 2px solid var(--nuetrals4);
+    border: 2px solid var(--neutrals4);
     border-radius: 90px;
-    max-width: 182px;
-    width: 100%;
     justify-content: center;
     padding: 16px 0;
 }
+.header__btn {
+    max-width: 182px;
+    width: 100%;
 
-.header__btn:hover {
+}
+
+.button:hover {
     background: var(--primary1);
     color: var(--nuetrals8);
 }
@@ -68,17 +93,21 @@
 
 @media(prefers-color-scheme: dark) {
     .header__description {
-        color:var(--nuetrals4);
+        color: var(--neutrals4);
     }
+
     .header__title {
-        color:var(--nuetrals8);
+        color: var(--nuetrals8);
     }
-    .header__btn {
-        color:var(--nuetrals8);
-        border-color: var(--nuetrals4);
+
+    .button {
+        color: var(--nuetrals8);
+        border-color: var(--neutrals3);
     }
-    .header__btn:hover {
+
+    .button:hover {
         border-color: var(--nuetrals1);
-        
+
     }
 }
+
