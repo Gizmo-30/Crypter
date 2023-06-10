@@ -74,4 +74,18 @@ body {
     }
 
 }
+
+@media(max-width:425px) {
+    .button {
+        background: var(--primary1);
+        color: var(--nuetrals8);
+        border: none;
+    }
+}
+
+
+
+.card-3__subscribe img {
+    background: var(--nuetrals1);
+}
        

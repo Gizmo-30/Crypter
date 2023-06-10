@@ -100,3 +100,41 @@ class Slider {
 //     prev: '.section-1__ctrl-left',
 //     direction: 'X'
 // })
+
+let isMobile = {
+    Android: function () { return navigator.userAgent.match(/Android/i); },
+    BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
+    iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+    Opera: function () { return navigator.userAgent.match(/Opera Mini/i); },
+    Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
+    any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
+};
+let body = document.querySelector('body')
+if (isMobile.any()) {
+    body.classList.add('_touch')
+} else {
+    body.classList.add('_screen')
+}
+
+const filter = document.querySelector('.filter'),
+    filterBtn = filter.querySelector('.filter__btn'),
+    filterOptions = filter.querySelectorAll('.filter__option'),
+    filterPopUp = filter.querySelector('.filter__popUp')
+
+
+filter.addEventListener('click', (e) => {
+    if (filter.classList.contains('active')) {
+        filter.classList.remove('active')
+    } else {
+        filter.classList.add('active')
+        filterOptions.forEach(element => {
+            element.addEventListener('click', () => {
+                filterOptions.forEach(element => {
+                    element.classList.remove('active')
+                });
+                element.classList.add('active')
+                filterBtn.innerHTML = element.innerHTML
+            })
+        });
+    }
+})
