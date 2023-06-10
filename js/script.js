@@ -122,19 +122,39 @@ const filter = document.querySelector('.filter'),
     filterPopUp = filter.querySelector('.filter__popUp')
 
 
-filter.addEventListener('click', (e) => {
-    if (filter.classList.contains('active')) {
-        filter.classList.remove('active')
-    } else {
-        filter.classList.add('active')
+// filter.addEventListener('click', (e) => {
+//     if (filter.classList.contains('active')) {
+//         filter.classList.remove('active')
+//     } else {
+//         filter.classList.add('active')
+//         filterOptions.forEach(element => {
+//             element.addEventListener('click', () => {
+//                 filterOptions.forEach(element => {
+//                     element.classList.remove('active')
+//                 });
+//                 element.classList.add('active')
+//                 filterBtn.innerHTML = element.innerHTML
+//             })
+//         });
+//     }
+// })
+
+filterBtn.addEventListener('click', () => {
+    filter.classList.add('active')
+    window.addEventListener('click', (e) => {
+        console.log(e.target);
         filterOptions.forEach(element => {
-            element.addEventListener('click', () => {
+            if (e.target.className == element.className) {
                 filterOptions.forEach(element => {
                     element.classList.remove('active')
                 });
-                element.classList.add('active')
-                filterBtn.innerHTML = element.innerHTML
-            })
+                e.target.classList.add('active')
+                filterBtn.innerHTML = e.target.innerHTML
+                filter.classList.remove('active')
+                e.stopPropagation()
+            } else if (e.target != filter && e.target != filterBtn && e.target != element) {
+                filter.classList.remove('active')
+            }
         });
-    }
+    })
 })
