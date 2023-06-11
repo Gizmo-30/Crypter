@@ -139,3 +139,62 @@ filterBtn.addEventListener('click', () => {
         });
     })
 })
+
+
+const slider = document.querySelector('.popularItem__slider'),
+    track = document.querySelector('.slider__line'),
+    item = slider.querySelectorAll('.slider__item'),
+    btnPrev = document.querySelector('.slider__button-prev'),
+    btnNext = document.querySelector('.slider__button-next');
+
+let position = 0;
+const slidesToShow = window.innerWidth <= 1024 ? 2 : 4;
+const slidesToScroll = 2;
+const itemsCount = item.length;
+const gap = 32
+const itemWidth = (slider.clientWidth - gap * slidesToShow) / slidesToShow;
+const movePosition = slidesToScroll * (itemWidth + gap);
+
+item.forEach(element => {
+    element.style = `min-width: ${itemWidth}px;`
+});
+
+btnPrev.addEventListener('click', () => {  
+    const itemsLeft = Math.abs(position) / itemWidth;
+    position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth
+    setPosition()
+})
+
+btnNext.addEventListener('click', () => {
+    const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+    console.log(itemsLeft);
+    position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth
+    setPosition()
+})
+
+function setPosition() {
+    track.style = `transform: translateX(${position}px)`
+    checkBtn()
+}
+
+function checkBtn() {
+    btnPrev.disabled = position === 0
+    btnNext.disabled = position <= - (itemsCount - slidesToShow) * itemWidth
+    
+    if (position === 0) {
+        btnPrev.classList.remove('active') 
+    } else {
+        btnPrev.classList.add('active')
+    }
+    
+    if (position <= - (itemsCount - slidesToShow) * itemWidth) {
+        btnNext.classList.remove('active') 
+    } else {
+        btnNext.classList.add('active') 
+    }
+}
+
+checkBtn()
+
+
+const btnblock = document.querySelector('.popularItem__btns')
