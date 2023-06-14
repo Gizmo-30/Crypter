@@ -172,6 +172,10 @@ items.forEach(element => {
     element.style = `min-width: ${itemWidth}px;`
 });
 
+window.addEventListener('resize', () => {
+    window.location.reload()
+})
+
 checkBtn()
 
 btnPrev.forEach(element => {
