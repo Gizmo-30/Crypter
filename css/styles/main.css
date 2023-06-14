@@ -34,6 +34,7 @@
 .section-1__sliderItem {
     display: flex;
     justify-content: space-between;
+    column-gap: 32px;
 }
 
 .section-1__wrapper {
@@ -237,14 +238,13 @@
 
 }
 
-
 @media(max-width: 768px) {
     .section-1__sliderItem {
         flex-wrap: wrap;
         justify-content: center;
         row-gap: 32px;
     }
-
+    
     .section-1__videoBlock {
         width: 100%;
         display: flex;
@@ -292,8 +292,17 @@
     justify-content: space-between;
 }
 
+.mainWork__imgBlock {
+    max-width: 462px;
+    width: 100%;
+    height: 446px;
+}
+
 .mainWork__img {
     border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .mainWork__info {
@@ -367,12 +376,18 @@
 
 .otherWork__img {
     border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .otherWork__imgBlock {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 160px;
+    width: 100%;
+    height: 148px;
 }
 
 .otherWork__imgBlock:hover::before, .otherWork__imgBlock:hover .otherWork__imgArrow  {
@@ -598,9 +613,6 @@
     .devider, .upload__btn, .section-2__upload::before {
         display: none;
     }
-    .mainWork__img, .otherWork__img {
-        width: 100%;
-    }
 }
 
 @media(max-width: 800px) {
@@ -625,7 +637,9 @@
         line-height: 24px;
     }
 
-
+    .mainWork__imgBlock {
+        height: 400px;
+    }
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>> */
@@ -993,19 +1007,28 @@
 .section-4__end {}
 
 
-.section-4__slider {}
+.section-4__slider {
+    overflow: hidden;
+}
 
-.section-4__sliderTrack {}
+.section-4__sliderTrack {
+    display: flex;
+    width: 100%;
+    column-gap: 32px;
+    transition: 0.8s;
+}
 
 .slider-4__item {}
 
 .card-4 {
-    max-width: 256px;
     width: 100%;
 }
 
 .card-4__imgBlock {
     position: relative;
+    margin-bottom: 21px;
+    height: 303px;
+
 }
 .card-4__imgBlock:hover .hover-4{
     opacity: 1;
@@ -1016,8 +1039,9 @@
 .card-4__img {
     border-radius: 16px;
     display: block;
-    /* width: 100%; */
-    margin-bottom: 21px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hover-4 {
