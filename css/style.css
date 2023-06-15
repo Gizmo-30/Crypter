@@ -80,12 +80,13 @@ body {
 
 }
 
-@media(max-width:425px) {
-    .button {
+body._touch {
+    .button, .nav__right-btn {
         background: var(--primary1);
         color: var(--nuetrals8);
         border: none;
     }
+
 }
 
 
