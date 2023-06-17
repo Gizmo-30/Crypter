@@ -21,6 +21,7 @@
 }
 .header__wrapper {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: end;
     height: 268px;
@@ -33,6 +34,11 @@
     font-size: 12px;
     line-height: 12px;
     text-transform: uppercase;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
 }
 
 .header__title {

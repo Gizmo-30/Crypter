@@ -619,7 +619,11 @@
         justify-content: space-evenly;
     }
 
-    .devider, .upload__btn, .section-2__upload::before {
+    .upload__btn, .section-2__upload::before {
+        display: none;
+    }
+
+    .upload__content .devider {
         display: none;
     }
 }
@@ -630,7 +634,24 @@
     }
 
     .upload__content {
-        flex-wrap: wrap;
+        overflow-x: auto;
+        scroll-snap-type: X proximity;
+        column-gap: 50px;
+        padding: 5px;
+    }
+    .upload__content::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .upload__item {
+        scroll-snap-align: start;
+        scroll-snap-stop: normal;
+        min-width: 166px;
+        flex-shrink: 0;
+    }
+
+    .upload__item:nth-of-type(1) {
+        padding-left: 5px;
     }
 }
 
