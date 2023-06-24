@@ -1672,7 +1672,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-}
+} 
 
 .discover__btn:after {
     content: url('../../img/icons/loading-light.svg');
