@@ -429,3 +429,38 @@ settingsButton.addEventListener('click', () => {
 })
 
 
+const popUpLinks = document.querySelectorAll('.popUp__link');
+
+let unlockPopup = true
+let timeOut = 3000
+
+if (popUpLinks.length > 0) {
+    popUpLinks.forEach(element => {
+        element.addEventListener('click', (e) => {
+            let popUpName = element.getAttribute('href')
+            const popUp = document.querySelector(popUpName)
+            popUpOpen(popUp)
+            e.preventDefault()
+        })
+    });
+}
+
+function popUpOpen(item) {
+    item.classList.add('active')
+    unlock = false
+    setTimeout(() => {
+        unlock = true
+    }, timeOut);
+
+    body.classList.add('lock')
+    item.addEventListener('click', (e) => {
+        if (!e.target.closest('.popUp__content')) {
+            item.classList.remove('active')
+            setTimeout(() => {
+               body.classList.remove('lock') 
+            }, timeOut);
+        }
+    })
+}
+
+ 

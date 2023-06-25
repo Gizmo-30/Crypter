@@ -52,6 +52,9 @@ body {
     background: var(--nuetrals8);
     cursor: default;
 }
+body.lock {
+    overflow: hidden;
+}
 
 @media(prefers-color-scheme: dark) {
     body {
