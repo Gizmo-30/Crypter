@@ -447,18 +447,12 @@ if (popUpLinks.length > 0) {
 
 function popUpOpen(item) {
     item.classList.add('active')
-    unlock = false
-    setTimeout(() => {
-        unlock = true
-    }, timeOut);
 
     body.classList.add('lock')
     item.addEventListener('click', (e) => {
         if (!e.target.closest('.popUp__content')) {
             item.classList.remove('active')
-            setTimeout(() => {
-               body.classList.remove('lock') 
-            }, timeOut);
+            body.classList.remove('lock') 
         }
     })
 }
