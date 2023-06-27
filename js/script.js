@@ -471,3 +471,18 @@ footerBtn.forEach(element => {
     })
 });
 
+// const navMenu = document.querySelector('.nav__menu'),
+//     navRight = document.querySelector('.nav__right');
+
+// console.log(navMenu.childNodes);
+// console.log(navRight.childNodes);
+
+const burgerBtnOpen = document.querySelector('.burger__open'),
+    burgerBtnCLose = document.querySelector('.burger__close');
+
+burgerBtnOpen.addEventListener('click', () => {
+    burgerBtnOpen.parentElement.classList.add('active')
+})
+burgerBtnCLose.addEventListener('click', () => {
+    burgerBtnCLose.parentElement.classList.remove('active')
+})
