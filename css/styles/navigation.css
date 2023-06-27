@@ -129,7 +129,7 @@ input[type="search"]::-webkit-search-cancel-button {
         border-bottom: 1px solid var(--neutrals3);
     }
     
-    .nav__logo {
+    .logo {
         color: var(--neutrals7);
     }
 

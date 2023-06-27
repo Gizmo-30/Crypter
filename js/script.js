@@ -58,9 +58,7 @@ class SliderMnBtns {
         this.btnNext.forEach(element => {
             element.addEventListener('click', () => {
                 this.itemsLeft = this.itemsCount - Math.round((Math.abs(this.position) + this.slidesToShow * this.itemWidth - this.slidesToShow * this.gap) / this.itemWidth);
-                console.log(this.itemsLeft);
                 this.position -= this.itemsLeft >= this.slidesToScroll ? this.movePosition : this.itemsLeft * this.itemWidth + this.itemsLeft * this.gap
-                console.log(this.position);
                 this.setPosition()
             })
         });
@@ -236,39 +234,35 @@ if (window.innerWidth <= 600) {
         items = [...slider.querySelectorAll('.discover__card')],
         btnPrev = document.querySelector('.discoverSlider__button-prev'),
         btnNext = document.querySelector('.discoverSlider__button-next');
-    
-        
-        let position = 0
-        let slidesToShow = window.innerWidth >= 1
-        let slidesToScroll = slidesToShow
-        let itemsCount = items.length
-        let gap = 16
-        
-        
-        let itemWidth = Math.ceil((slider.clientWidth - gap * (slidesToShow - 1)) / slidesToShow);
-        let movePosition = (slidesToScroll * itemWidth) + (slidesToScroll * gap);
-        
-        items.forEach(element => {
-            element.style = `min-width: ${itemWidth}px;`
-        });
-        
-        checkBtn()
-        
-        btnPrev.addEventListener('click', () => {
-            let itemsLeft = Math.floor(Math.abs(position) / itemWidth)
-            position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth + itemsLeft * gap
-            console.log(itemsLeft);
-            console.log(position);
-            setPosition()
-        })
-        
-        btnNext.addEventListener('click', () => {
-            let itemsLeft = itemsCount - Math.round((Math.abs(position) + slidesToShow * itemWidth - slidesToShow * gap) / itemWidth);
-            position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth + itemsLeft * gap
-            console.log(itemsLeft);
-            console.log(position);
-            setPosition()
-        })
+
+
+    let position = 0
+    let slidesToShow = window.innerWidth >= 1
+    let slidesToScroll = slidesToShow
+    let itemsCount = items.length
+    let gap = 16
+
+
+    let itemWidth = Math.ceil((slider.clientWidth - gap * (slidesToShow - 1)) / slidesToShow);
+    let movePosition = (slidesToScroll * itemWidth) + (slidesToScroll * gap);
+
+    items.forEach(element => {
+        element.style = `min-width: ${itemWidth}px;`
+    });
+
+    checkBtn()
+
+    btnPrev.addEventListener('click', () => {
+        let itemsLeft = Math.floor(Math.abs(position) / itemWidth)
+        position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth + itemsLeft * gap
+        setPosition()
+    })
+
+    btnNext.addEventListener('click', () => {
+        let itemsLeft = itemsCount - Math.round((Math.abs(position) + slidesToShow * itemWidth - slidesToShow * gap) / itemWidth);
+        position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth + itemsLeft * gap
+        setPosition()
+    })
 
     function setPosition() {
         track.style = `transform: translateX(${position}px)`
@@ -278,14 +272,14 @@ if (window.innerWidth <= 600) {
     function checkBtn() {
         if (position === 0) {
             btnPrev.classList.remove('active')
-            btnPrev.setAttribute('disabled','')
+            btnPrev.setAttribute('disabled', '')
         } else {
             btnPrev.classList.add('active')
         }
-        
+
         if (position <= - (itemsCount - slidesToShow) * itemWidth) {
             btnNext.classList.remove('active')
-            btnNext.setAttribute('disabled','')
+            btnNext.setAttribute('disabled', '')
         } else {
             btnNext.classList.add('active')
         }
@@ -294,14 +288,14 @@ if (window.innerWidth <= 600) {
 }
 
 
-    
+
 class Filter {
     constructor(obj) {
         this.filter = document.querySelector(obj.filter),
-        this.btn = document.querySelector(obj.btn),
-        this.options = document.querySelectorAll(obj.options);
-        
-        
+            this.btn = document.querySelector(obj.btn),
+            this.options = document.querySelectorAll(obj.options);
+
+
         this.btn.addEventListener('click', () => {
             this.filter.classList.toggle('active')
             window.addEventListener('click', (e) => {
@@ -375,7 +369,7 @@ if (window.innerWidth > 768) {
 }
 
 
-const section_62Filter_media= new Filter({
+const section_62Filter_media = new Filter({
     filter: '.filter-6-media',
     btn: '.filter-6__btn-media',
     options: '.filter-6__option-media',
@@ -452,9 +446,28 @@ function popUpOpen(item) {
     item.addEventListener('click', (e) => {
         if (!e.target.closest('.popUp__content')) {
             item.classList.remove('active')
-            body.classList.remove('lock') 
+            body.classList.remove('lock')
         }
     })
 }
 
- 
+
+
+const footerMedia = document.querySelector('.footer__start');
+
+if (window.innerWidth >= 600 && window.innerWidth <= 768) {
+    footerMedia.classList.add('active')
+} else footerMedia.classList.remove('active')
+
+const footerBtn = [...document.querySelectorAll('.footer__btn')]
+const footerDropDown = [...document.querySelectorAll('.footer__drowDown')]
+const footer = document.querySelectorAll('.footer')
+footerBtn.forEach(element => {
+    element.addEventListener('click', () => {
+        footerBtn.forEach(element => {
+            element.parentNode.classList.remove('active')
+        });
+        element.parentNode.classList.toggle('active')
+    })
+});
+
