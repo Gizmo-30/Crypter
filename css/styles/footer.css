@@ -20,7 +20,9 @@
     --iconSize: 20px;
 }
 
-.footer {}
+.footer {
+    border-top: 1px solid var(--neutrals6);
+}
 
 .footer__content {
     display: flex;
@@ -166,124 +168,4 @@
     line-height: 20px;
     margin-left: 16px;
     display: inline-block;
-}
-
-@media(prefers-color-scheme:dark) {
-
-    .footer__title,
-    .footer__text {
-        color: var(--nuetrals8);
-    }
-
-    .newsLetter__paragraph,
-    .footer__cookies-text {
-        color: var(--neutrals6);
-    }
-
-    .footer__end,
-    .send-email__input {
-        border-color: var(--neutrals3);
-    }
-}
-
-@media(max-width: 1024px) {
-    .footer__links {
-        column-gap: 65px;
-    }
-
-    .footer__title {
-        max-width: 270px;
-    }
-}
-
-@media(max-width: 768px) {
-    .footer__links {
-        column-gap: 65px;
-    }
-
-    .footer__start {
-        flex-direction: column;
-        row-gap: 50px;
-
-    }
-
-    .footer__start-media {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer__links {
-        column-gap: 100px;
-    }
-
-}
-
-@media(max-width: 600px) {
-    .footer__start {
-        flex-direction: column;
-        row-gap: 32px;
-
-    }
-
-    .footer .devider {
-        display: block;
-    }
-
-    .footer__links .devider {
-        display: block;
-    }
-
-    .footer__cookies {
-        display: none;
-    }
-
-    .footer__copyright-text {
-        margin: 0 auto;
-    }
-
-    .footer {
-        background: var(--nuetrals2);
-    }
-
-    .footer__links {
-        flex-direction: column;
-        row-gap: 32px;
-    }
-
-    .footer__links .footer__text {
-        margin-bottom: 0;
-    }
-
-    .footer__btn {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer__btn::after {
-        content: url('../../img/icons/selectArrow.svg');
-        margin-right: 5%;
-        transition: 0.4s;
-    }
-
-    .newsLetter__paragraph, .send-email {
-        max-width:  unset;
-    }
-
-    .footer__drowDown {
-        position: relative;
-    }
-
-    .footer__list {
-        display: none;
-    }
-
-    .footer__drowDown.active .footer__list {
-        display: flex;
-    }
-    .footer__drowDown.active .footer__btn::after {
-        transform: rotate(180deg);
-    }
-    .footer__drowDown.active .footer__text {
-        margin-bottom: 30px;
-    }
 }

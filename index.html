@@ -10,8 +10,8 @@
     <link rel="icon" href="img/icons/logo.svg">
 </head>
 
-<body>
-
+<body id="body">
+    <a class="goToStart" href="#body"></a>
     <header class="header">
         <nav class="nav">
             <div class="container">
@@ -23,7 +23,7 @@
                         </a>
                         <ul class="nav__menu">
                             <li>
-                                <a href="#" class="nav__link text-1">Discover</a>
+                                <a href="#discover__section" class="nav__link text-1">Discover</a>
                             </li>
                             <li>
                                 <a href="#" class="nav__link text-1">How it work</a>
@@ -31,12 +31,12 @@
                         </ul>
                     </div>
                     <div class="nav__right">
-                        <input type="search" class="nav__right-search" placeholder="search">
+                        <input type="search" class="nav__right-search nav__input" placeholder="search">
                         <a href="#" class="nav__right-notification">
                             <img src="img/icons/notification.svg" alt="notification__icon">
                         </a>
                         <div class="nav__right-btns">
-                            <a href="#" class="nav__right-btn text-1 ">Upload</a>
+                            <a href="html/upload.html" class="nav__right-btn text-1 ">Upload</a>
                             <a href="#" class="nav__right-btn text-1 ">Connect Wallet</a>
                         </div>
                     </div>
@@ -48,18 +48,17 @@
                         </a>
                         <ul>
                             <li>
-                                <a href="#" class="nav__link text-3 burger__link">Discover</a>
+                                <a href="#discover__section" class="nav__link text-3 burger__link">Discover</a>
                             </li>
                             <li>
                                 <a href="#" class="nav__link text-3 burger__link">How it work</a>
                             </li>
                             <li>
-                                <input type="search" class="nav__right-search text-3 burger__input"
-                                    placeholder="search">
+                                <input type="search" class="nav__input text-3 burger__input" placeholder="search">
                             </li>
                         </ul>
                         <div class="burger__btns">
-                            <a href="#" class="nav__right-btn text-3 burger__btn">Upload</a>
+                            <a href="html/upload.html" class="nav__right-btn text-3 burger__btn">Upload</a>
                             <a href="#" class="nav__right-btn text-3 burger__btn">Connect Wallet</a>
                         </div>
                     </div>
@@ -71,7 +70,7 @@
                 <div class="header__wrapper">
                     <h4 class="header__description">Create, explore, & collect digital art NFTs.</h4>
                     <h1 class="header__title">The new creative economy.</h1>
-                    <a href="#" class="header__btn button">Start your search</a>
+                    <a href="#popular__item" class="header__btn button">Start your search</a>
                 </div>
             </div>
         </div>
@@ -284,7 +283,7 @@
                 </div>
             </section>
         </div>
-        <section class="section-3 section">
+        <section id="popular__item" class="section-3 section">
             <div class="sectopm-3__wrapper">
                 <div class="container">
                     <div class="section-3__content popularItem">
@@ -1091,7 +1090,7 @@
                 </div>
             </div>
         </section>
-        <div class="section-6 section">
+        <div id="discover__section" class="section-6 section">
             <div class="container">
                 <div class="section-6__content discover">
                     <h2 class="section__title section-6__title">
@@ -1613,9 +1612,9 @@
                         <div class="footer__drowDown">
                             <h4 class="footer__text footer__btn">Stacks</h4>
                             <ul class="footer__list">
-                                <li><a href="#" class="footer__link">Discover</a></li>
+                                <li><a href="#discover__section" class="footer__link">Discover</a></li>
                                 <li><a href="#" class="footer__link">Connect wallet</a></li>
-                                <li><a href="#" class="footer__link">Create item</a></li>
+                                <li><a href="html/upload.html" class="footer__link">Create item</a></li>
                             </ul>
                         </div>
                         <hr class="devider">
@@ -1647,7 +1646,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 
 </html>

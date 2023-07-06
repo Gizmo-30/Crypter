@@ -76,44 +76,4 @@
     color: var(--nuetrals8);
 }
 
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
-
-@media(max-width: 1024px) {
-    .header__content {
-        height: 252px;
-    }
-}
-
-@media(max-width: 500px) {
-    .header__content {
-        height: 236px;
-    }
-
-    .header__title {
-        font-size: 32px;
-    }
-}
-
-@media(prefers-color-scheme: dark) {
-    .header__description {
-        color: var(--neutrals4);
-    }
-
-    .header__title {
-        color: var(--nuetrals8);
-    }
-
-    .button {
-        color: var(--nuetrals8);
-        border-color: var(--neutrals3);
-    }
-
-    .button:hover {
-        border-color: var(--nuetrals1);
-
-    }
-}
 

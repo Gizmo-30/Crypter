@@ -4,6 +4,7 @@
 @import 'styles/header.css';
 @import 'styles/main.css';
 @import 'styles/footer.css';
+@import 'media.css';
 
 * {
     margin: 0;
@@ -12,11 +13,6 @@
     list-style: none;
     text-decoration: none;
     transition: all 0.4s ease 0s;
-    
-}
-
-button {
-    background: none;
 }
 
 
@@ -24,21 +20,21 @@ button {
     --primary1: #3772FF;
     --primary2: #9757D7;
     --primary3: #FFD166;
-    --primary4:#45B26B;
-    --primary5:#EF466F;
-    --nuetrals1:#141416;
+    --primary4: #45B26B;
+    --primary5: #EF466F;
+    --nuetrals1: #141416;
     --nuetrals2: #23262F;
-    --neutrals3:#353945;
+    --neutrals3: #353945;
     --neutrals4: #777E91;
-    --neutrals5:#B1B5C3;
-    --neutrals6:#E6E8EC;
-    --neutrals7:#F4F5F6;
+    --neutrals5: #B1B5C3;
+    --neutrals6: #E6E8EC;
+    --neutrals7: #F4F5F6;
     --nuetrals8: #FCFCFD;
-    --Poppins-Bold:'Poppins-Bold';
-    --Poppins-SemiBold:'Poppins-SemiBold';
-    --Poppins-Medium:'Poppins-Medium';
-    --Poppins-Regular:'Poppins-Regular';
-    --DMSans-Bold:'DMSans-Bold';
+    --Poppins-Bold: 'Poppins-Bold';
+    --Poppins-SemiBold: 'Poppins-SemiBold';
+    --Poppins-Medium: 'Poppins-Medium';
+    --Poppins-Regular: 'Poppins-Regular';
+    --DMSans-Bold: 'DMSans-Bold';
     --iconSize: 20px;
 }
 
@@ -48,43 +44,27 @@ button {
     margin: 0 auto;
 }
 
+.container-2 {
+    max-width: 736px;
+    width: 100%;
+    margin: 0 auto;
+}
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: var(--nuetrals8);
     cursor: default;
+    overflow-x: hidden;
 }
+
 body.lock {
     overflow: hidden;
 }
 
-@media(prefers-color-scheme: dark) {
-    body {
-        background: var(--nuetrals1);
-    }   
-}
-
-@media(max-width:1200px) {
-    .container {
-        padding: 0 15px;
-    }
-       
-}
-       
-@media(max-width:1024px) {
-    .container {
-        max-width: 864px;
-    }
-       
-}
-
-@media(max-width:768px) {
-    .container {
-        padding: 0 32px;
-    }
-
-}
-
 body._touch {
-    .button, .nav__right-btn {
+    .button,
+    .nav__right-btn {
         background: var(--primary1);
         color: var(--nuetrals8);
         border: none;
@@ -92,8 +72,60 @@ body._touch {
 
 }
 
-
+button {
+    background: none;
+}
 
 .card-3__subscribe img {
     background: var(--nuetrals1);
+}
+
+.goToStart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px dotted var(--neutrals3);
+    background: url('../img/icons/arrow-left.svg') center no-repeat;
+    transform: rotate(90deg);
+    background-color: var(--neutrals6);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 8%;
+    right: 5%;
+    z-index: 100;
+}
+
+
+@media(prefers-color-scheme: dark) {
+    .goToStart {
+        background-color: var(--neutrals3);
+        border-color: var(--neutrals6);
+    }
+    body {
+        background: var(--nuetrals1);
+    }
+}
+
+
+@media(max-width:1200px) {
+    .container, .container-2 {
+        padding: 0 15px;
+    }
+
+}
+
+@media(max-width:1024px) {
+    .container {
+        max-width: 864px;
+    }
+
+}
+
+@media(max-width:768px) {
+    .container, .container-2 {
+        padding: 0 32px;
+    }
+
 }
