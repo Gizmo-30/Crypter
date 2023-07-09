@@ -27,20 +27,22 @@ const select = new dropDown({
 
 if (window.innerWidth <= 1024) {
     const popUpLinks = document.querySelectorAll('.popUp__link');
-    const preiviewClose = document.querySelector('.preiview__close');
+    const preiviewClose = document.querySelectorAll('.close__btn');
     if (popUpLinks.length > 0) {
         popUpLinks.forEach(element => {
             element.addEventListener('click', (e) => {
                 let popUpName = element.getAttribute('href')
-                const popUp = document.getElementById(popUpName)
+                let popUp = document.getElementById(popUpName)
 
 
                 popUp.classList.add('active')
                 body.classList.add('lock')
-                preiviewClose.addEventListener('click', () => {
-                    popUp.classList.remove('active')
-                    body.classList.remove('lock')
-                })
+                preiviewClose.forEach(element => {
+                    element.addEventListener('click', () => {
+                        popUp.classList.remove('active')
+                        body.classList.remove('lock')
+                    })
+                });
 
                 e.preventDefault()
             })

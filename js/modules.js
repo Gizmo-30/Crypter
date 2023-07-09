@@ -211,6 +211,7 @@ const modules = {
     burger: function burger() {
         const burgerBtnOpen = document.querySelector('.burger__open'),
             burgerBtnCLose = document.querySelector('.burger__close'),
+            body = document.querySelector('.body'),
             header = document.querySelector('.header');
 
         burgerBtnOpen.addEventListener('click', () => {

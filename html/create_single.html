@@ -11,6 +11,50 @@
 </head>
 
 <body>
+    <div id="create-item" class="create-item__popUp">
+        <div class="create-item__content popUp__content">
+            <div class="create-item__start">
+                <h2 class="title-2">Folow steps</h2>
+                <div class="close__btn"></div>
+            </div>
+            <div class="create-item__block">
+                <div class="">
+                    <div class="create-item__img">
+                        <img src="../img/icons/upload-file.svg" alt="">
+                    </div>
+                    <div class="create-item__info">
+                        <h4 class="create-item__title">Upload files & Mint token</h4>
+                        <p class="create-item__prompt">Call contract method</p>
+                    </div>
+                </div>
+                <button type="button" class="create-item__btn button">Start now</button>
+            </div>
+            <div class="create-item__block">
+                <div class="">
+                    <div class="create-item__img">
+                        <img src="../img/icons/sell-order.png" alt="">
+                    </div>
+                    <div class="create-item__info">
+                        <h4 class="create-item__title">Sign sell order</h4>
+                        <p class="create-item__prompt">Sign sell order using your wallet</p>
+                    </div>
+                </div>
+                <button type="button" class="create-item__btn button">Start now</button>
+            </div>
+            <div class="create-item__block">
+                <div class="">
+                    <div class="create-item__img">
+                        <img src="../img/icons/lock-ordersvg.svg" alt="">
+                    </div>
+                    <div class="create-item__info">
+                        <h4 class="create-item__title">Sign lock order</h4>
+                        <p class="create-item__prompt">Sign lock order using your wallet</p>
+                    </div>
+                </div>
+                <button type="button" class="create-item__btn button">Start now</button>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <nav class="nav">
             <div class="container">
@@ -175,15 +219,15 @@
                         </div>
                         <div class="form__buttons">
                             <button type="button" href="preview__popUp" class="form__button form__button-preview button popUp__link">Preview</button>
-                            <button type="button" class="form__button button">Create item</button>
+                            <button type="button" href="create-item" class="popUp__link form__button button">Create item</button>
                         </div>
                     </form>
                 </div>
                 <div class="create__preview preview " id="preview__popUp">
                     <div class="preview__content popUp__content">
                         <div class="preview__start">
-                            <h2 class="preview__title">Preview</h2>
-                            <button type="button" class="preiview__close"></button>
+                            <h2 class="title-2">Preview</h2>
+                            <button type="button" href="preview__popUp" class="preiview__close close__btn"></button>
                         </div>
                         <div class="preview__img card-4__imgBlock">
                             <img src="../img/image-15.png" alt="" class="card-4__img">

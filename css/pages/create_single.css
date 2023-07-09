@@ -420,7 +420,8 @@ input[type='file'] {
     justify-content: space-between;
     align-items: center;
 }
-.preview__title {
+
+.title-2 {
     color: var(--nuetrals2);
     font-family: var(--Poppins-Medium);
     font-size: 24px;
@@ -446,37 +447,106 @@ input[type='file'] {
     display: none;
 }
 
-.preiview__close {
-    display: none;
+
+.popUp {}
+
+.create-item {}
+
+.popUp__content {}
+
+.create-item__content {
+    max-width: 448px;
+    width: 100%;
+    background: var(--nuetrals8);
+    padding: 32px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.create-item__start {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.title-2 {}
+
+.close__btn {}
+
+
+.create-item__block>div {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-bottom: 16px;
+}
+
+.create-item__img {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    border-radius: 48px;
-    border: 2px solid var(--neutrals6);
-    padding: 8px;
+    border-radius: 40px;
+    background: var(--neutrals6);
 }
 
-.preiview__close::before,
-.preiview__close::after {
-    content: '';
-    width: 20px;
-    height: 2px;
-    background: var(--nuetrals2);
-    position: absolute;
+.create-item__info {}
+
+.create-item__title {
+    color: var(--nuetrals2);
+    font-family: var(--Poppins-Medium);
+    font-size: 16px;
+    line-height: 24px;
 }
 
-.preiview__close::before {
-    top: 50%;
-    transform: rotate(45deg) translateY(-50%);
-
+.create-item__prompt {
+    color: var(--neutrals4);
+    font-family: var(--Poppins-Regular);
+    font-size: 12px;
+    line-height: 20px;
 }
 
-.preiview__close::after {
-    bottom: 50%;
-    transform: rotate(-45deg) translateY(50%);
+.create-item__btn {
+    width: 100%;
 }
+
+.button {}
+
+.create-item__popUp {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 22, 0.9);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.create-item__popUp.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.create-item__content {
+    overflow-y: auto;
+    overflow-x: none;
+}
+
 
 
 
@@ -501,7 +571,8 @@ input[type='file'] {
     .multiple__link,
     .title,
     .card__title,
-    .preview__title {
+    .title-2,
+    .create-item__title {
         color: var(--nuetrals8);
     }
 
@@ -521,11 +592,13 @@ input[type='file'] {
         background: var(--nuetrals2);
     }
 
-    .dropDown__option.active {
+    .dropDown__option.active,
+    .create-item__img {
         background: var(--neutrals3);
     }
 
-    .preview__content {
+    .preview__content,
+    .create-item__content {
         background: var(--nuetrals1);
     }
 
@@ -533,14 +606,10 @@ input[type='file'] {
         color: var(--neutrals4);
     }
 
-    .card:nth-of-type(1) .card__img, .preiview__close::before,
-    .preiview__close::after {
+    .card:nth-of-type(1) .card__img {
         background: var(--nuetrals8);
     }
 
-    .preview__content {
-        border: 1px solid var(--neutrals3);
-    }
 
     .preview {
         box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12);
@@ -603,10 +672,10 @@ input[type='file'] {
         position: fixed;
         width: 100%;
         height: 100%;
-        background: rgba(20, 20, 22, 0.8);
+        background: rgba(20, 20, 22, 0.9);
         top: 0;
         left: 0;
-        /* z-index: 3; */
+        z-index: 3;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -636,14 +705,27 @@ input[type='file'] {
         flex-direction: column;
         row-gap: 32px;
     }
+
     .dropDown {
         width: 100%;
         max-width: unset;
     }
 
+    .settings__description {
+        margin-top: 15px;
+    }
+
 }
+
 @media(max-width: 650px) {
     .form__button {
         width: 100%;
+    }
+
+}
+
+@media(prefers-color-scheme:dark) {
+    .preview.active {
+        background: rgba(35, 38, 47, 0.9);
     }
 }

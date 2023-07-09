@@ -49,9 +49,11 @@
     width: 100%;
     margin: 0 auto;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background: var(--nuetrals8);
     cursor: default;
@@ -63,6 +65,7 @@ body.lock {
 }
 
 body._touch {
+
     .button,
     .nav__right-btn {
         background: var(--primary1);
@@ -97,12 +100,44 @@ button {
     z-index: 100;
 }
 
+.close__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 48px;
+    border: 2px solid var(--neutrals6);
+    padding: 8px;
+}
+
+.close__btn::before,
+.close__btn::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    position: absolute;
+}
+
+.close__btn::before {
+    top: 50%;
+    transform: rotate(45deg) translateY(-50%);
+
+}
+
+.close__btn::after {
+    bottom: 50%;
+    transform: rotate(-45deg) translateY(50%);
+}
+
 
 @media(prefers-color-scheme: dark) {
     .goToStart {
         background-color: var(--neutrals3);
         border-color: var(--neutrals6);
     }
+
     body {
         background: var(--nuetrals1);
     }
@@ -110,7 +145,9 @@ button {
 
 
 @media(max-width:1200px) {
-    .container, .container-2 {
+
+    .container,
+    .container-2 {
         padding: 0 15px;
     }
 
@@ -124,7 +161,9 @@ button {
 }
 
 @media(max-width:768px) {
-    .container, .container-2 {
+
+    .container,
+    .container-2 {
         padding: 0 32px;
     }
 
