@@ -225,12 +225,6 @@
         height: 252px;
     }
 
-    .section-1__video {
-        max-width: 500px;
-        height: 600px;
-        object-fit: cover;
-    }
-
     .popularItem__end {
         flex-direction: column;
         row-gap: 32px;
@@ -330,21 +324,10 @@
         display: block;
     }
 
-    .section-1__sliderItem {
+    .section-1__content {
         flex-wrap: wrap;
         justify-content: center;
         row-gap: 32px;
-    }
-
-    .section-1__videoBlock {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .section-1__video {
-        height: 400px;
-        width: 100%;
     }
 
     .section-1__ctrls {

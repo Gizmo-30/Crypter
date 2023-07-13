@@ -261,6 +261,115 @@ const modules = {
             });
         }
     },
+    firstSlider: function firstSlider() {
+        const video = document.querySelectorAll('.section-1__video'),
+            videoBlock = document.querySelector('.section-1__slider'),
+            videoTrack = document.querySelector('.section-1__videoBlock'),
+            price = document.querySelector('.section-1__price.section-1__text'),
+            currentBid = document.querySelector('.section-1__bid'),
+            bidDollar = document.querySelector('.section-1__bidDollar'),
+            hour = document.querySelector('.section-1__auctionEnding-time.hour'),
+            minute = document.querySelector('.section-1__auctionEnding-time.minute'),
+            second = document.querySelector('.section-1__auctionEnding-time.second'),
+            btnPrev1 = document.querySelector('.section-1__ctrl-left'),
+            btnNext1 = document.querySelector('.section-1__ctrl-right');
+
+
+        const sliderData = {
+            '0': {
+                img: 'img/image-05.png',
+                name: 'Enrico Cole',
+                price: '3.5 ETH',
+                bid: '1.00 ETH',
+                bidDollar: '$3,618.36',
+                hour: 19,
+                minute: 24,
+                second: 19,
+            },
+            '1': {
+                img: 'img/image-03.png',
+                name: 'Anita Bins',
+                price: '2.2 ETH',
+                bid: '9.00 ETH',
+                bidDollar: '$23,618.36',
+                hour: 3,
+                minute: 33,
+                second: 9,
+            },
+            '2': {
+                img: 'img/image-04.png',
+                name: 'Joana Wuckert',
+                price: '7 ETH',
+                bid: '11.00 ETH',
+                bidDollar: '$9,618.36',
+                hour: 72,
+                minute: 0,
+                second: 0,
+            },
+            '3': {
+                img: 'img/image-02.png',
+                name: 'Lorena Ledner',
+                price: '0.8 ETH',
+                bid: '5.00 ETH',
+                bidDollar: '$1,618.36',
+                hour: 24,
+                minute: 0,
+                second: 0,
+            },
+        }
+
+        video.forEach(element => {
+            element.style = `min-width: ${videoBlock.clientWidth}px`
+        });
+
+        let activeSlide1 = 0
+        let moveSize1 = videoBlock.clientWidth
+        let position1 = 0
+
+        btnNext1.addEventListener('click', () => {
+            activeSlide1++
+            getData(activeSlide1)
+            position1 += (moveSize1 + 32)
+            videoTrack.style = `transform: translateX(-${position1}px)`
+            checkBtn1()
+        })
+
+        btnPrev1.addEventListener('click', () => {
+            activeSlide1--
+            getData(activeSlide1)
+            position1 -= (moveSize1 + 32)
+            videoTrack.style = `transform: translateX(-${position1}px)`
+            checkBtn1()
+        })
+
+        function checkBtn1() {
+            btnNext1.disabled = activeSlide1 == video.length - 1
+            btnPrev1.disabled = activeSlide1 <= 0
+
+            if (activeSlide1 == video.length - 1) {
+                btnNext1.classList.remove('active')
+            } else {
+                btnNext1.classList.add('active')
+            }
+
+            if (activeSlide1 <= 0) {
+                btnPrev1.classList.remove('active')
+            } else {
+                btnPrev1.classList.add('active')
+            }
+
+        }
+
+        function getData(element) {
+            price.innerHTML = sliderData[element].price
+            currentBid.innerHTML = sliderData[element].bid
+            bidDollar.innerHTML = sliderData[element].bidDollar
+            hour.innerHTML = sliderData[element].hour
+            minute.innerHTML = sliderData[element].minute
+            second.innerHTML = sliderData[element].second
+            return
+        }
+    }
 
 }
 
@@ -271,3 +380,4 @@ export const activeClass = modules.activeClass
 export const footer = modules.footer
 export const burger = modules.burger
 export const popUp = modules.popUp
+export const firstSlider = modules.firstSlider

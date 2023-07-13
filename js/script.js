@@ -5,6 +5,7 @@ import { activeClass } from "./modules.js"
 import { footer } from "./modules.js"
 import { burger } from "./modules.js"
 import { popUp } from "./modules.js"
+import { firstSlider } from "./modules.js"
 
 const body = document.querySelector('body')
 
@@ -21,6 +22,9 @@ if (isMobile.any()) {
 } else {
     body.classList.add('_screen')
 }
+
+firstSlider()
+
 
 
 const section_3Slide = new sliderMedia({
@@ -228,11 +232,6 @@ if (window.innerWidth <= 768) {
     footer()
     burger()
     popUp()    
-
-
-    // if () {
-        
-    // }
 
 }
 
