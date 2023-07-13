@@ -64,15 +64,11 @@ body.lock {
     overflow: hidden;
 }
 
-body._touch {
-
-    .button,
-    .nav__right-btn {
-        background: var(--primary1);
-        color: var(--nuetrals8);
-        border: none;
-    }
-
+body._touch .button,
+body._touch .nav__right-btn {
+    background: var(--primary1);
+    color: var(--nuetrals8);
+    border: none;
 }
 
 button {
@@ -129,6 +125,14 @@ button {
 .close__btn::after {
     bottom: 50%;
     transform: rotate(-45deg) translateY(50%);
+}
+
+
+
+@media(prefers-color-scheme: dark) {
+    .popUp {
+        background: rgba(35, 38, 47, 0.9);
+    }
 }
 
 

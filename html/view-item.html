@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypter</title>
+    <link rel="icon" href="../img/icons/logo.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages/view-item.css">
+</head>
+
+<body>
+    <aside class="popUp view__popUp" id="view-popUp">
+        <div class="popUp__content">
+            <div class="popUp__start">
+                <h2 class="popUp__title">Checkout</h2>
+                <button type="button" class="close__btn popUp__close"></button>
+            </div>
+            <p class="popUp__prompt">You are about to purchase <span>C O I N Z</span> from <span>UI8</span></p>
+            <ul class="popUp__table table">
+                <li>
+                    <h4 class="table__value">0.007</h4>
+                    <h6 class="table__value">ETH</h6>
+                </li>
+                <hr class="devider">
+                <li>
+                    <h4 class="table__name">Your balance</h4>
+                    <h6 class="table__value">8.498 ETH</h6>
+                </li>
+                <li>
+                    <h4 class="table__name">Service fee</h4>
+                    <h6 class="table__value">0 ETH</h6>
+                </li>
+                <li>
+                    <h4 class="table__name">You will pay</h4>
+                    <h6 class="table__value">0.007 ETH</h6>
+                </li>
+            </ul>
+            <div class="popUp__warning warning">
+                <img src="../img/icons/warning.svg" alt="" class="warning__icon">
+                <div class="">
+                    <h3 class="warning__title">This creator is not verified</h3>
+                    <p class="warning__text">Purchase this item at your own risk</p>
+                </div>
+            </div>
+            <div class="popUp__btns">
+                <a href="purchasing-popUp" class="popUp__btn button popUp__link">I understand, continue</a>
+                <button type="button" class="popUp__btn button popUp__close">Cancel</button>
+            </div>
+        </div>
+    </aside>
+    <aside class="popUp purchasing__popUp" id="purchasing-popUp">
+        <div class="popUp__content">
+            <div class="popUp__start">
+                <h2 class="popUp__title">Follow steps</h2>
+                <button type="button" class="close__btn popUp__close"></button>
+            </div>
+            <div class="popUp__purchasing purchasing">
+                <figure>
+                    <img src="../img/1LBN.gif" alt="">
+                </figure>
+                <div class="">
+                    <h3 class="purchasing__title">Purchasing</h3>
+                    <p class="purchasing__prompt">Sending transaction with your wallet</p>
+                </div>
+            </div>
+            <div class="popUp__warning warning">
+                <img src="../img/icons/warning.svg" alt="" class="warning__icon">
+                <div class="">
+                    <h3 class="warning__title">This creator is not verified</h3>
+                    <p class="warning__text">Purchase this item at your own risk</p>
+                </div>
+            </div>
+            <div class="popUp__btns">
+                <a href="purchased-popUp" class="popUp__btn button popUp__link">I understand, continue</a>
+                <button type="button" class="popUp__btn button popUp__close">Cancel</button>
+            </div>
+        </div>
+    </aside>
+    <aside class="popUp purchased__popUp" id="purchased-popUp">
+        <div class="popUp__content purchased__content">
+            <div class="purchased__start">
+                <button class="close__b tn purchased__btn popUp__close"></button>
+                <h2 class="purchased__title">
+                    Yay!🎉
+                </h2>
+            </div>
+            <p class="purchased__prompt">You successfully purchased <a href="https://ui8.net/">C O I N Z</a> from UI8</p>
+            <ul class="purchased__table">
+                <li>
+                    <h5 class="purchased__name">Status</h5>
+                    <h6 class="purchased__name">Transaction ID</h6>
+                </li>
+                <li>
+                    <h5 class="purchased__value">Processing</h5>
+                    <h6 class="purchased__value">0msx836930...87r398</h6>
+                </li>
+            </ul>
+            <div class="purchased__show-off show-off">
+                <p class="show-off__text purchased__prompt">Time to show-off</p>
+                <ul class="show-of__mesengers">
+                    <li>
+                        <a target="_blank" href="https://ru-ru.facebook.com/" class="show-of__link">
+                            <img src="../img/icons/facebook.svg" alt="" class="show-of__icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Dru" class="show-of__link">
+                            <img src="../img/icons/twitter.svg" alt="" class="show-of__icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/" class="show-of__link">
+                            <img src="../img/icons/instagram.svg" alt="" class="show-of__icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.pinterest.com/" class="show-of__link">
+                            <img src="../img/icons/pinterest.svg" alt="" class="show-of__icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav__content">
+                    <div class="nav__left">
+                        <a href="../index.html" class="nav__logo logo">
+                            <img src="../img/icons/logo.svg" alt="logo">
+                            crypter
+                        </a>
+                        <ul class="nav__menu">
+                            <li>
+                                <a href="../index.html#discover__section" class="nav__link text-1">Discover</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#how-it-works" class="nav__link text-1">How it work</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav__right">
+                        <input type="search" class="nav__right-search nav__input" placeholder="search">
+                        <a href="#" class="nav__right-notification">
+                            <img src="../img/icons/notification.svg" alt="notification__icon">
+                        </a>
+                        <div class="nav__right-btns">
+                            <a href="upload.html" class="nav__right-btn text-1 ">Upload</a>
+                            <a href="connect-wallet.html" class="nav__right-btn text-1 ">Connect Wallet</a>
+                        </div>
+                    </div>
+                    <img src="../img/icons/burger.svg" alt="" class="burger__button burger__open">
+                    <img src="../img/icons/сlose.svg" alt="" class="burger__button burger__close">
+                    <div class="burger">
+                        <a href="#" class="nav__right-notification burger__notification ">
+                            <img src="../img/icons/notification.svg" alt="notification__icon">
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="../index.html#discover__section" class="nav__link text-3 burger__link">Discover</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#how-it-works" class="nav__link text-3 burger__link">How it work</a>
+                            </li>
+                            <li>
+                                <input type="search" class="nav__input text-3 burger__input" placeholder="search">
+                            </li>
+                        </ul>
+                        <div class="burger__btns">
+                            <a href="upload.html" class="nav__right-btn text-3 burger__btn">Upload</a>
+                            <a href="connect-wallet.html" class="nav__right-btn text-3 burger__btn">Connect Wallet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        
+        <div class="container">
+            <div class="view">
+                <div class="view__left">
+                    <img src="../img/image-05.png" alt="">
+                    <div class="view__left-cover">
+                        <div class="view__left-text">
+                            <span>Art</span>
+                            <span>unlockable</span>
+                        </div>
+                        <div class="view__controllers view__controllers-media">
+                            <span class="close__btn view__icon"></span>
+                            <span class="view__icon"></span>
+                            <span class="view__icon"></span>
+                            <span class="view__icon"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="view__right">
+                    <div class="view__details">
+                        <h1 class="view__title">The amazing art</h1>
+                        <div class="view__price">
+                            <span class="view__span section__price">2.5 ETH</span>
+                            <span class="view__span section__price">$4,429.87</span>
+                            <span class="view__amount ">10 in stock</span>
+                        </div>
+                    </div>
+                    <p class="view__desc">This NFT Card will give you Access to Special Airdrops. To learn more about UI8 please visit <a href="https://ui8.net" class="view__link">https://ui8.net</a></p>
+                    <div class="view__info">
+                        <ul class="view__nav">
+                            <li><a href="#" class="view__type active">Info</a></li>
+                            <li><a href="#" class="view__type">Owners</a></li>
+                            <li><a href="#" class="view__type">History</a></li>
+                            <li><a href="#" class="view__type">Bids</a></li>
+                        </ul>
+                        <div class="view__data">
+                            <div class="view__creator creator">
+                                <div class="creator__img">
+                                    <img src="../img/avatars/avatar-2.png" class="avatar" alt="">
+                                    <span></span>
+                                </div>
+                                <div class="">
+                                    <h3 class="creator__text">Owner</h3>
+                                    <h3 class="creator__name">Raquel Will</h3>
+                                </div>
+                            </div>
+                            <hr class="devider">
+                            <div class="view__creator creator">
+                                <div class="creator__img">
+                                    <img src="../img/avatars/avatar-1-large.png" class="avatar" alt="">
+                                    <span></span>
+                                </div>
+                                <div class="">
+                                    <h3 class="creator__text">Creator</h3>
+                                    <h3 class="creator__name">Selina Mayert</h3>
+                                </div>
+                            </div>
+                            <hr class="devider">
+                        </div>
+                    </div>
+                    <div class="view__order order">
+                        <div class="order__start">
+                            <img src="../img/avatars/avatar-1-large.png"  class="order__img avatar" alt="">
+                            <div class="order__info">
+                                <p class="order__bidInfo">Highest bid by <span>Kohaku Tora</span></p>
+                                <h3 class="order__price"><span>1.46 ETH</span> $2,764.89</h3>
+                            </div>
+                        </div>
+                        <div class="order__btns">
+                            <a href="view-popUp" class="order__btn button popUp__link">Purchase now</a>
+                            <a href="view-popUp" class="order__btn button popUp__link">Place a bid</a>
+                        </div>
+                        <p class="order__prompt">Service fee  <span> 1.5% </span> 2.563 ETH $4,540.62</p>
+                    </div>
+                </div>
+                <div class="view__controllers">
+                    <span class="close__btn view__icon"></span>
+                    <span class="view__icon"></span>
+                    <span class="view__icon"></span>
+                    <span class="view__icon"></span>
+                    <!-- <ul class="view__dropDown dropDown">
+                        <li><a href="#" class="dropDown__link"><img src="../img/icons/changePrice.svg"  alt="">Change price</a></li>
+                        <hr class="devider">
+                        <li><a href="#" class="dropDown__link"><img src="../img/icons/transfer.svg"  alt="">Transfer token</a></li>
+                        <hr class="devider">
+                        <li><a href="#" class="dropDown__link"><img src="../img/icons/removeSale.svg"  alt="">Remove from sale</a></li>
+                        <hr class="devider">
+                        <li><a href="#" class="dropDown__link"><img src="../img/icons/burnToken.svg"  alt="">Burn token</a></li>
+                        <hr class="devider">
+                        <li><a href="#" class="dropDown__link"><img src="../img/icons/report.svg"  alt="">Report</a></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__start">
+                    <div class="footer__start-media">
+                        <div class="">
+                            <a href="../index.html" class="logo">
+                                <img src="../img/icons/logo.svg" alt="logo">
+                                crypter
+                            </a>
+                            <div class="footer__title">The New Creative Economy.</div>
+                        </div>
+                        <div class="footer__newsLetter-media newsLetter">
+                            <h4 class="newsLetter__title footer__text">Join Newsletter</h4>
+                            <p class="newsLetter__paragraph">Subscribe our newsletter to get more free design course and
+                                resource</p>
+                            <form action="#" class="send-email">
+                                <input type="email" class="send-email__input" placeholder="Enter your email">
+                                <button class="send-email__bnt"><img src="../img/icons/sendEmail.svg" alt=""></button>
+                            </form>
+                        </div>
+                    </div>
+                    <hr class="devider">
+                    <div class="footer__links">
+                        <div class="footer__drowDown">
+                            <h4 class="footer__text footer__btn">Stacks</h4>
+                            <ul class="footer__list">
+                                <li><a href="../index.html#discover__section" class="footer__link">Discover</a></li>
+                                <li><a href="connect-wallet.html" class="footer__link">Connect wallet</a></li>
+                                <li><a href="html/upload.html" class="footer__link">Create item</a></li>
+                            </ul>
+                        </div>
+                        <hr class="devider">
+                        <div class="footer__drowDown">
+                            <h4 class="footer__text footer__btn">Info</h4>
+                            <ul class="footer__list">
+                                <li><a href="#" class="footer__link">Download</a></li>
+                                <li><a href="#" class="footer__link">Demos</a></li>
+                                <li><a href="#" class="footer__link">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="devider">
+                    <div class="footer__newsLetter newsLetter">
+                        <h4 class="newsLetter__title footer__text">Join Newsletter</h4>
+                        <p class="newsLetter__paragraph">Subscribe our newsletter to get more free design course and
+                            resource</p>
+                        <form action="#" class="send-email">
+                            <input type="email" class="send-email__input" placeholder="Enter your email">
+                            <button class="send-email__bnt"><img src="../img/icons/sendEmail.svg" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer__end">
+                    <h6 class="footer__copyright-text">Copyright © 2021 UI8 LLC. All rights reserved</h6>
+                    <h6 class="footer__cookies">We use cookies for better service.<a href="#"
+                            class="footer__cookies-link">Accept</a></h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="../js/view-item.js"></script>
+</body>
+
+</html>

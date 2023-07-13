@@ -221,6 +221,7 @@
 }
 
 .mainWork__imgBlock {
+    display: block;
     max-width: 462px;
     width: 100%;
     height: 446px;
@@ -311,6 +312,7 @@
 }
 
 .otherWork__imgBlock {
+    display: block;
     position: relative;
     display: flex;
     justify-content: center;
@@ -805,6 +807,7 @@
 }
 
 .card-4__imgBlock {
+    display: block;
     position: relative;
     margin-bottom: 21px;
     height: 303px;

@@ -1,3 +1,5 @@
+
+
 const modules = {
     dropDown: class Filter {
         constructor(obj) {
@@ -211,7 +213,7 @@ const modules = {
     burger: function burger() {
         const burgerBtnOpen = document.querySelector('.burger__open'),
             burgerBtnCLose = document.querySelector('.burger__close'),
-            body = document.querySelector('.body'),
+            body = document.querySelector('body'),
             header = document.querySelector('.header');
 
         burgerBtnOpen.addEventListener('click', () => {
@@ -225,23 +227,30 @@ const modules = {
             body.classList.remove('lock')
             header.style = `blur(0)`
         })
+
         return 
     },
     popUp: function popUp() {
         const popUpLinks = document.querySelectorAll('.popUp__link');
+        const popUpAll = [...document.querySelectorAll('.popUp')];
         const body = document.querySelector('body');
         if (popUpLinks.length > 0) {
             popUpLinks.forEach(element => {
                 element.addEventListener('click', (e) => {
+                    popUpAll.forEach(element => {
+                        element.classList.remove('active')
+                        body.classList.remove('lock')
+                    });
                     let popUpName = element.getAttribute('href')
+                    console.log(element.getAttribute('href'));
                     const popUp = document.getElementById(popUpName)
 
                     // function
-                    
+
                     popUp.classList.add('active')
                     body.classList.add('lock')
                     popUp.addEventListener('click', (e) => {
-                        if (!e.target.closest('.popUp__content')) {
+                        if (!e.target.closest('.popUp__content') || e.target.classList.contains('popUp__close')) {
                             popUp.classList.remove('active')
                             body.classList.remove('lock')
                         }
@@ -252,6 +261,7 @@ const modules = {
             });
         }
     },
+
 }
 
 export const dropDown = modules.dropDown

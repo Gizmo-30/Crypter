@@ -6,6 +6,8 @@ import { footer } from "./modules.js"
 import { burger } from "./modules.js"
 import { popUp } from "./modules.js"
 
+const body = document.querySelector('body')
+
 let isMobile = {
     Android: function () { return navigator.userAgent.match(/Android/i); },
     BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
@@ -14,13 +16,11 @@ let isMobile = {
     Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
     any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
 };
-let body = document.querySelector('body')
 if (isMobile.any()) {
     body.classList.add('_touch')
 } else {
     body.classList.add('_screen')
 }
-
 
 
 const section_3Slide = new sliderMedia({
@@ -228,6 +228,12 @@ if (window.innerWidth <= 768) {
     footer()
     burger()
     popUp()    
+
+
+    // if () {
+        
+    // }
+
 }
 
 
