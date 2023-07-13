@@ -22,6 +22,7 @@
     pointer-events: all;
 }
 
+
 body._touch .button,
 body._touch .nav__right-btn {
     background: var(--primary1);
